@@ -21,6 +21,7 @@ app.get('/hello', function(req, res){
 
 app.get('/balance/:accountId', function(req, res){
     var accountId = req.params.accountId;
+    console.log(accountId)
     server.accounts()
         .accountId(accountId)
         .call()
