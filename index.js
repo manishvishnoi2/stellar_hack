@@ -8,9 +8,8 @@ StellarSdk.Network.useTestNetwork()
 var app = express()
 const port = process.env.PORT || 5000;
 
-// app.use(bodyParser.json());
-// app.use(bodyParser.urlencoded({extended: false}));
-// app.use(express.static(path.join(__dirname, 'public')));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: true}));  
 
 app.listen(port, () => console.log(`Listening on port ${port}`));
 
@@ -52,13 +51,13 @@ app.post('/payment/', function(req, res){
         .setTimeout(30)
         .build();
         transaction.sign(sourceKeypair);
-        console.log(transaction.toEnvelope().toXDR('base64'));
         try{
             const transactionResult = await server.submitTransaction(transaction);
-            console.log(JSON.stringify(transactionResult, null, 2));
-            console.log('\nSuccess! View the transaction at: ');
-            console.log(transactionResult._links.transaction.href);
-            res.send("Success")
+            const response_data = {
+                status: 'Success',
+                link: transactionResult._links.transaction.href,
+            }
+            res.send(JSON.stringify(response_data))
         } catch (e) {
             console.log('An error has occured:');
             console.log(e);
