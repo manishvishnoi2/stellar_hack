@@ -12,7 +12,7 @@ class Payments extends Component {
             issue_link: '',
             amount: '',
             secret_key: '',
-            public_key: '',
+            distributor_public_key: '',
             note: '',
             response: '',
             status: '',
@@ -35,18 +35,6 @@ class Payments extends Component {
         });
     }
 
-    changeSecretKey(event){
-        this.setState({
-            secret_key: event.target.value
-        });   
-    }
-
-    changePublicKey(event){
-        this.setState({
-            public_key: event.target.value
-        });   
-    }
-
     changeAmount(event){
         this.setState({
             amount: event.target.value
@@ -62,12 +50,6 @@ class Payments extends Component {
     changeGitLink(event){
         this.setState({
             issue_link: event.target.value
-        });   
-    }
-
-    changeNote(event){
-        this.setState({
-            note: event.target.value
         });   
     }
 
@@ -122,18 +104,6 @@ class Payments extends Component {
 
                     <RcB.InputGroup className="mb-3">
                         <RcB.InputGroup.Prepend>
-                        <RcB.InputGroup.Text id="git_issue">Employer Name</RcB.InputGroup.Text>
-                        </RcB.InputGroup.Prepend>
-                        <RcB.FormControl
-                        placeholder="Employer Name"
-                        aria-label="Employer Name"
-                        aria-describedby="basic-addon1"
-                        onChange={this.changeEmployerName}
-                        />
-                    </RcB.InputGroup>
-
-                    <RcB.InputGroup className="mb-3">
-                        <RcB.InputGroup.Prepend>
                         <RcB.InputGroup.Text id="git_issue">Issue Details</RcB.InputGroup.Text>
                         </RcB.InputGroup.Prepend>
                         <RcB.FormControl
@@ -155,43 +125,12 @@ class Payments extends Component {
 
                     <RcB.InputGroup className="mb-3">
                         <RcB.InputGroup.Prepend>
-                        <RcB.InputGroup.Text id="basic-addon1">Your Secret Key</RcB.InputGroup.Text>
-                        </RcB.InputGroup.Prepend>
-                        <RcB.FormControl
-                        placeholder="Key"
-                        aria-label="Key"
-                        aria-describedby="basic-addon1"
-                        onChange={this.changeSecretKey}
-                        />
-                    </RcB.InputGroup>
-
-                    <RcB.InputGroup className="mb-3">
-                        <RcB.InputGroup.Prepend>
-                        <RcB.InputGroup.Text id="basic-addon2">Recepient Public Key</RcB.InputGroup.Text>
-                        </RcB.InputGroup.Prepend>
-                        <RcB.FormControl
-                        placeholder="Key"
-                        aria-label="Key"
-                        aria-describedby="basic-addon1"
-                        onChange={this.changePublicKey}
-                        />
-                    </RcB.InputGroup>
-
-                    <RcB.InputGroup className="mb-3">
-                        <RcB.InputGroup.Prepend>
                         <RcB.InputGroup.Text>Amount in Lumen</RcB.InputGroup.Text>
                         </RcB.InputGroup.Prepend>
                         <RcB.FormControl onChange={this.changeAmount} aria-label="Amount (to the nearest dollar)" />
                         <RcB.InputGroup.Append>
                         <RcB.InputGroup.Text>.00</RcB.InputGroup.Text>
                         </RcB.InputGroup.Append>
-                    </RcB.InputGroup>
-
-                    <RcB.InputGroup>
-                        <RcB.InputGroup.Prepend>
-                        <RcB.InputGroup.Text>Note</RcB.InputGroup.Text>
-                        </RcB.InputGroup.Prepend>
-                        <RcB.FormControl as="textarea" onChange={this.changeNote} aria-label="With textarea" />
                     </RcB.InputGroup>
 
                 
