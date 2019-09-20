@@ -27,6 +27,7 @@ class Payments extends Component {
         this.changeGitLink = this.changeGitLink.bind(this)
         this.changeNote = this.changeNote.bind(this)
         this.addIssue = this.addIssue.bind(this)
+        this.issueDBAPI = this.issueDBAPI.bind(this)
     }
 
     changeEmployerName(event){
@@ -59,6 +60,15 @@ class Payments extends Component {
                 this.setState({status: res.status, response: res.link, show: true})
             })
             .catch(err => console.log(err));
+    }
+
+    issueDBAPI = async () => {
+        const req_body = {
+            github_link: this.state.issue_link,
+            bounty: this.state.amount,
+            status: "OPEN",
+            employer_name: this.state.employerName
+        }
     }
 
     callBackendAPI = async () => {

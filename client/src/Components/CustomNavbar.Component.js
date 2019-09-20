@@ -45,8 +45,9 @@ class CustomNavbar extends Component {
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
-                        <Nav.Link href="/balance">Balances</Nav.Link>
-                        <Nav.Link href="/payment">Payments</Nav.Link>
+                        {/* <Nav.Link href="/balance">Balances</Nav.Link>
+                        <Nav.Link href="/payment">Payments</Nav.Link> */}
+                        <Nav.Link href="/Employers">Employers</Nav.Link>
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text style={{color: 'white'}}>
