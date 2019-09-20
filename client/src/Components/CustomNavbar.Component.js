@@ -19,6 +19,7 @@ class CustomNavbar extends Component {
                     <Nav className="mr-auto">
                         <Nav.Link href="/balance">Balances</Nav.Link>
                         <Nav.Link href="/payment">Payments</Nav.Link>
+                        <Nav.Link href="/dev">Developer</Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
             </Navbar>

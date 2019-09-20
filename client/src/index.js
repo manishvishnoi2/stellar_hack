@@ -5,6 +5,7 @@ import App from './App';
 import Payments from './Components/Payments.Component';
 import Balance from './Components/Balance.Component';
 import './index.css';
+import Dev from './Components/Dev.Component'
 
 const routing = (
   <Router>
@@ -12,6 +13,7 @@ const routing = (
       <Route exact path="/" component={App}/>
       <Route path="/balance" component={Balance}/>
       <Route path="/payment" component={Payments}/>
+      <Route path="/dev" component={Dev} />
     </div>
   </Router>
 )
