@@ -16,6 +16,7 @@ class CustomNavbar extends Component {
             userType: this.props.userType,
             name: this.props.name,
             balance: 0,
+            userType: this.props.userType,
             accountId: this.props.accountId
         }
         this.fetchBalance = this.fetchBalance.bind(this)
@@ -53,7 +54,7 @@ class CustomNavbar extends Component {
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text style={{color: 'white'}}>
-                        Signed in as: {this.state.name},
+                        Signed in as: {this.state.userType},
                         Balance: {this.state.balance}
                         </Navbar.Text>
                     </Navbar.Collapse>
