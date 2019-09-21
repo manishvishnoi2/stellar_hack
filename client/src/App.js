@@ -62,7 +62,7 @@ class App extends Component {
     return (
       <div className="App">
         <CustomNavbar/>
-        <h2>This is the home page</h2>
+        <h2 style={{marginTop: 200}}>Welcome to Stellar Hackathon Demo</h2>
       </div>
     );
   }
