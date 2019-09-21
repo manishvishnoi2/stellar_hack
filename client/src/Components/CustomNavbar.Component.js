@@ -49,6 +49,7 @@ class CustomNavbar extends Component {
                         {/* <Nav.Link href="/balance">Balances</Nav.Link>
                         <Nav.Link href="/payment">Payments</Nav.Link> */}
                         <Nav.Link href="/Employers">Employers</Nav.Link>
+                        <Nav.Link href="/dev">Developers</Nav.Link>
                     </Nav>
                     <Navbar.Collapse className="justify-content-end">
                         <Navbar.Text style={{color: 'white'}}>

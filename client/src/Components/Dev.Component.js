@@ -9,7 +9,9 @@ class Dev extends Component {
             "balance": 0,
             "bb": [],
             "show": false,
-            "commits": []
+            "commits": [],
+            dev_name: 'Kaushal Mhalgi',
+            accountId: 'GBZ7Q6N4DJ6HN5LRNC7CJJAUS4B4IKMFJXVVRXHN6VDDSKGD2DAKMT77'
         }
         this.checkBalanceCall = this.checkBalanceCall.bind(this);
         this.getIssues = this.getIssues.bind(this)
@@ -149,8 +151,8 @@ class Dev extends Component {
     }
 
     render() {
-        return (<div><CustomNavbar />
-            <div>Total balance of acoount : {this.state.balance}</div>
+        return (<div><CustomNavbar name={this.state.dev_name} userType="Developer" accountId={this.state.accountId}/>
+            <RcB.Container style={{marginTop: 25}}>
             <RcB.Table striped bordered hover>
                 <thead>
                     <tr>
@@ -195,7 +197,7 @@ class Dev extends Component {
           </RcB.Button>
                     </RcB.Modal.Footer></form>
             </RcB.Modal>
-
+            </RcB.Container>
         </div>
         )
 
